@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+const program = require('commander');
+
+program
+  .option('-p, --port [port]', 'Set preview port', Number, 4444)
+  .version(require('../package.json').version)
+  .parse(process.argv);
+
+require('..')(program);
