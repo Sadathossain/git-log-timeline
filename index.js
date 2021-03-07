@@ -46,13 +46,13 @@ module.exports = function(program) {
           res.end('<h2>404: not found</h2>');
         }
       });
-    }).listen(program.port, function(err) {
+    }).listen(program.opts().port, function(err) {
       if(err) {
         console.log(err.message);
         return;
       }
-      console.log('Please visit http://localhost:%s/ view check-in timeline', program.port);
-      exec('open http://127.0.0.1:' + program.port);
+      console.log('Please visit http://localhost:%s/ view check-in timeline', program.opts().port);
+      exec('open http://127.0.0.1:%s' + program.opts().port);
     });
   }
 
