@@ -1,6 +1,6 @@
 {
   "name": "git-log-timeline",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Generates TimelineJS data to showcase commit history.",
   "main": "index.js",
   "keywords": [
