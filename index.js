@@ -57,7 +57,7 @@ module.exports = function(program) {
   }
 
   function gitLog() {
-    exec('git log --committer=Sadat --pretty=format:"%an|%ad|%s" --reverse --all', {cwd: cwd}, function(err, data, stderr) {
+    exec('git log --committer=Sadat --pretty=format:"%an|%ad|%s" --all', {cwd: cwd}, function(err, data, stderr) {
       if(err) {
         return console.log(err);
       }
